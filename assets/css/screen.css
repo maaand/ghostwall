@@ -274,6 +274,10 @@ ul.social li.pinterest:hover{
 	background-color:#cb2027;
 	border-color:#cb2027;
 }
+ul.social li.weibo:hover{
+	background-color:#eb182c;
+	border-color:#eb182c;	
+}
 ul.social li.rss:hover{
 	background-color:#F16B24;
 	border-color:#F16B24;
