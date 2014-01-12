@@ -1,0 +1,16 @@
+<div class="widget" id="widget-gmap">
+  <h3 class="widget-title">我们的位置</h3>
+  <div class="widget-content">
+    <div class="gmap-container clearfix">
+      <div id="gmap">
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  // 百度地图API功能
+  var map = new BMap.Map("gmap");                 // 创建Map实例
+  var point = new BMap.Point(116.713879, 39.52799); // 创建点坐标 116.713879,39.52799
+  map.centerAndZoom(point,18);                    // 初始化地图,设置中心点坐标和地图级别。
+  map.enableScrollWheelZoom();                    //启用滚轮放大缩小
+</script>
