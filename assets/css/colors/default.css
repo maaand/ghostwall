@@ -1,5 +1,5 @@
 ::selection {
-	background: #01C7CE;
+	background: #5dcff3;
 	color: #fff;
 }
 a:hover, a:focus{
@@ -10,8 +10,8 @@ a:hover, a:focus{
 .btn-theme:active,
 .btn-theme.active,
 .open .dropdown-toggle.btn-theme {
-	background-color:#01C7CE;
-	border-color:#01C7CE;
+	background-color:#ffd97d;
+	border-color:#ffd97d;
 }
 textarea:focus,
 input[type="text"]:focus,
@@ -35,10 +35,10 @@ blockquote {
 	border-left-color:#01C7CE;
 }
 #intro {
-	background-color: #01C7CE;
+	background-color: #5dcff3;
 }
 #intro.covered:before{
-	background-color: #01C7CE;
+	background-color: #5dcff3;
 }
 .post .wrap .post-title a:hover{
 	color: #01C7CE;
@@ -52,7 +52,7 @@ blockquote {
 	color: #01C7CE;
 }
 .post .wrap .post-excerpt a.read-more{
-	color:#01C7CE;
+	color:#f0aa00;
 }
 .post-content a{
 	color:#01C7CE;

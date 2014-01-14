@@ -153,7 +153,7 @@ pre{
 	border-radius: 0;
 }
 .navbar-custom{
-	background: #373737;
+	background: #39859d;
 	color: #fff;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
@@ -233,7 +233,7 @@ ul.social li a{
 	display: block;	
 }
 ul.social li a i{
-	color:#bdbdbd;
+	color:#fff;
 	width:100%;
 	font-size:18px;
 	display: block;
@@ -251,8 +251,8 @@ ul.social li.facebook:hover{
 	border-color:#3b5998;
 }
 ul.social li.google:hover{
-	background-color:#d13f2d;
-	border-color:#d13f2d;
+	background-color:#dd4c39;
+	border-color:#dd4c39;
 }
 ul.social li.dribbble:hover{
 	background-color:#ea4c89;
@@ -275,8 +275,8 @@ ul.social li.pinterest:hover{
 	border-color:#cb2027;
 }
 ul.social li.weibo:hover{
-	background-color:#eb182c;
-	border-color:#eb182c;	
+	background-color:#fb7960;
+	border-color:#fb7960;	
 }
 ul.social li.rss:hover{
 	background-color:#F16B24;
@@ -791,7 +791,7 @@ ul.social li.rss:hover{
 /*            7. FOOTER             */
 /*---------------------------------*/
 .site-footer{
-	background:#111111;
+	background:#39859d;
 	padding:30px 0 10px 0;
 	color: #fff;
 }
