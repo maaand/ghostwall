@@ -153,7 +153,7 @@ pre{
 	border-radius: 0;
 }
 .navbar-custom{
-	background: #373737;
+	background: #055e70;
 	color: #fff;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
@@ -309,6 +309,10 @@ ul.social li.pinterest:hover{
 ul.social li.rss:hover{
 	background-color:#F16B24;
 	border-color:#F16B24;
+}
+ul.social li.weibo:hover{
+	background-color:#dd4c39;
+	border-color:#dd4c39;	
 }
 
 /*-----------------------------------*/
@@ -750,6 +754,9 @@ ul.social li.rss:hover{
 .widget .widget-content{
 	position: relative;
 }
+.widget .widget-content .widget-footer{
+	color: #accad4;
+}
 
 /*-----------------------------------*/
 /*         6. SHORT CODES           */
@@ -873,7 +880,7 @@ ul.social li.rss:hover{
 /*            7. FOOTER             */
 /*---------------------------------*/
 .site-footer{
-	background:#111111;
+	background:#055e70;
 	padding:30px 0 10px 0;
 	color: #fff;
 }
@@ -884,7 +891,8 @@ ul.social li.rss:hover{
 .site-footer .widget .widget-title{
 	margin-top: 0;
 	text-transform: uppercase;
-	border-bottom: solid 1px #777;
+	color: #accad4;
+	border-bottom: solid 1px #accad4;
 	display: inline-block;
 	padding-bottom: 5px;
 	margin-bottom: 20px;
@@ -902,11 +910,27 @@ ul.social li.rss:hover{
 	top:0;
 }
 .site-footer hr {
-	border-top: 1px solid #000;
-	border-bottom: 1px solid #222;
+	border-top: 1px solid #24454b;
+	border-bottom: 1px solid #46838f;
 }
 .site-footer .copyright-right{
 	text-align: right;
+	color: #accad4;
+}
+.site-footer .copyright-left{
+	color: #accad4;
+}
+.site-footer .copyright-right a{
+	color: #accad4;
+}
+.site-footer .copyright-left a{
+	color: #accad4;
+}
+.site-footer .icp{
+	color: #accad4;
+}
+.site-footer .icp a{
+	color: #accad4;
 }
 .gototop{
 	margin-top: -10px;
@@ -914,7 +938,7 @@ ul.social li.rss:hover{
 .totop {
 	height: 40px;
 	width: 40px;
-	background: #222;
+	background: #208195;
 	border-radius: 50%;
 	display: inline-block;
 	padding: 8px 10px;
@@ -949,6 +973,12 @@ ul.social li.rss:hover{
     z-index: 99999;
     position: relative;
     text-align: center;
+}
+.vcard .vcard-text{
+    color: #accad4;
+}
+.vcard .vcard-icon .fa{
+    color: #accad4;
 }
 /*-----------------------------------*/
 /*       8. RESPONSIVE SETTING      */
