@@ -4,7 +4,7 @@
 * Description: Showcase Theme for Ghost
 * Author: Sunflowertheme
 * Author URI: http://www.sunflowertheme.com
-* Version:1.0
+* Version:1.2
 */
 
 /*================================================================*/
@@ -27,7 +27,7 @@
 *, body {
 	font-family: 'Open Sans', sans-serif;
 	color: #777;
-	font-size: 13px;
+	font-size: 14px;
 	line-height: 1.65;
 	-webkit-font-smoothing: antialiased;
 	margin: 0;
@@ -71,11 +71,11 @@ ul {
 	list-style: none;
 }
 a {
-	-webkit-transition: all 0.25s ease-in-out;
-	-moz-transition: all 0.25s ease-in-out;
-	-o-transition: all 0.25s ease-in-out;
-	-ms-transition: all 0.25s ease-in-out;
-	transition: all 0.25s ease-in-out;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	transition: all 0.2s ease;
 	color: #777;
 	text-decoration: none;
 	outline: 0;
@@ -153,15 +153,12 @@ pre{
 	border-radius: 0;
 }
 .navbar-custom{
-	background: #39859d;
+	background: #373737;
 	color: #fff;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0;
 	margin-bottom: 0;
-}
-.navbar-custom .navbar-header{
-	width: 100%;
 }
 .navbar>.container .navbar-brand{
 	text-transform: uppercase;
@@ -173,10 +170,45 @@ pre{
 .navbar>.container .navbar-brand img{
 	max-height: 50px;
 }
-.navbar-custom .navbar-header .social-top{
+.navbar .social-top{
+	display: inline-block;
 	float: right;
 }
-
+.main-nav{
+	display: inline-block !important;
+	float: right;
+	padding-right: 0;
+	margin: 30px 0 25px 0;
+	vertical-align: middle;
+}
+.main-nav.collapse{
+	display: inline-block !important;
+}
+.main-nav>li{
+	display: inline-block;
+	text-align: right;
+	text-align: center;
+	background: transparent;
+}
+.main-nav>li>a{
+	background: transparent;
+	color: #BDBDBD;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 0px 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	text-align: center;
+	border-bottom: solid 1px transparent;
+}
+.main-nav>li.active>a,
+.main-nav>li>a:hover{
+	border-bottom-color: #BDBDBD;
+	background: transparent;
+}
 blockquote {
 	padding: 0px 20px;
 	margin: 0 0 20px;
@@ -233,7 +265,7 @@ ul.social li a{
 	display: block;	
 }
 ul.social li a i{
-	color:#fff;
+	color:#bdbdbd;
 	width:100%;
 	font-size:18px;
 	display: block;
@@ -251,8 +283,8 @@ ul.social li.facebook:hover{
 	border-color:#3b5998;
 }
 ul.social li.google:hover{
-	background-color:#dd4c39;
-	border-color:#dd4c39;
+	background-color:#d13f2d;
+	border-color:#d13f2d;
 }
 ul.social li.dribbble:hover{
 	background-color:#ea4c89;
@@ -273,10 +305,6 @@ ul.social li.skype:hover{
 ul.social li.pinterest:hover{
 	background-color:#cb2027;
 	border-color:#cb2027;
-}
-ul.social li.weibo:hover{
-	background-color:#fb7960;
-	border-color:#fb7960;	
 }
 ul.social li.rss:hover{
 	background-color:#F16B24;
@@ -418,6 +446,9 @@ ul.social li.rss:hover{
 	margin-bottom:30px;
 	overflow: hidden;
 }
+.post.page{
+	margin-bottom: 0px;
+}
 .post img{
 	width: 100%;
 }
@@ -427,6 +458,35 @@ ul.social li.rss:hover{
 	border-bottom: medium double #ddd;
 	position: relative;
 	color: #333;
+}
+#isotope-content .post.featured .wrap:before,
+#isotope-content .post.featured .wrap:after{
+  content: '';
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: 0;
+}
+#isotope-content .post.featured .wrap:before{
+	content: '\f006';
+  	font-family:'FontAwesome';
+  	font-size: 13px;
+  	color: #fff;
+  	text-align: center;
+  	height: 23px;
+  	width: 26px;
+  	z-index: 9999;
+  	right: -3px;
+  	top: -3px;
+  	padding-top: 2px;
+}
+#isotope-content .post.featured .wrap:after {
+  	border-width: 0px 32px 32px 0px;
+  	border-color: transparent #008B8B;
+  	top: 0px;
+  	right: 0px;
+  	z-index: 9998;
 }
 .post .wrap .post-title{
 	font-size: 13px;
@@ -610,7 +670,24 @@ ul.social li.rss:hover{
 .post-content a:hover{
 	text-decoration: underline;
 }
-
+.post-content ul {
+   list-style-type: disc;
+   list-style-position: inside;
+}
+.post-content ol {
+   list-style-type: decimal;
+   list-style-position: inside;
+}
+.post-content ul ul, .post-content ol ul {
+   list-style-type: circle;
+   list-style-position: inside;
+   margin-left: 15px;
+}
+.post-content ol ol, .post-content  ul ol {
+   list-style-type: lower-latin;
+   list-style-position: inside;
+   margin-left: 15px;
+}
 .post-wrap .post-meta{
 	margin-top: 20px;
 	padding: 5px 0;
@@ -701,7 +778,12 @@ ul.social li.rss:hover{
 .feedList li:hover .itemTitle a, .feedList li:hover .itemContent{
 	color: #01C7CE;
 }
-
+.feedList li .itemContent .read-more{
+	color: #01C7CE;
+}
+.feedList li .itemContent .read-more:hover{
+	text-decoration: underline;
+}
 .flickr-feed{
 	margin: 0;
 	padding: 0;
@@ -791,7 +873,7 @@ ul.social li.rss:hover{
 /*            7. FOOTER             */
 /*---------------------------------*/
 .site-footer{
-	background:#39859d;
+	background:#111111;
 	padding:30px 0 10px 0;
 	color: #fff;
 }
@@ -802,11 +884,10 @@ ul.social li.rss:hover{
 .site-footer .widget .widget-title{
 	margin-top: 0;
 	text-transform: uppercase;
-	border-bottom: solid 1px #fff;
+	border-bottom: solid 1px #777;
 	display: inline-block;
 	padding-bottom: 5px;
 	margin-bottom: 20px;
-	color: #fff;
 }
 .gmap-container{
 	position: relative;
@@ -821,27 +902,11 @@ ul.social li.rss:hover{
 	top:0;
 }
 .site-footer hr {
-	border-top: 1px solid #fff;
-	border-bottom: 1px solid #fff;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #222;
 }
 .site-footer .copyright-right{
 	text-align: right;
-	color: #fff;
-}
-.site-footer .copyright-left{
-	color: #fff;
-}
-.site-footer .copyright-right a{
-	color: #fff;
-}
-.site-footer .copyright-left a{
-	color: #fff;
-}
-.site-footer .icp{
-	color: #fff;
-}
-.site-footer .icp a{
-	color: #fff;
 }
 .gototop{
 	margin-top: -10px;
@@ -885,12 +950,6 @@ ul.social li.rss:hover{
     position: relative;
     text-align: center;
 }
-.vcard .vcard-text{
-    color: #fff;
-}
-.vcard .vcard-icon .fa{
-    color: #fff;
-}
 /*-----------------------------------*/
 /*       8. RESPONSIVE SETTING      */
 /*---------------------------------*/
@@ -900,6 +959,9 @@ ul.social li.rss:hover{
 	}
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
+	.navbar .social-top{
+		display: none;
+	}
 	.widget-wrap {
 		margin-top: 0;
 	}
@@ -917,6 +979,70 @@ ul.social li.rss:hover{
 	}
 	.navbar>.container .navbar-brand{
 		padding-left: 0;
+	}
+	.navbar .social-top{
+		display: none;
+	}
+	.navbar .main-nav{
+		display: none !important;
+	}
+	.navbar .main-nav.in{
+		display: block !important;
+		width: 100%;
+		margin: -10px 0 25px 0;
+		padding: 10px 0 0 0;
+		border: none;
+		box-shadow: none;
+		background: transparent;
+		position: relative;
+	}
+	.main-nav.in:before{
+		content: '';
+		position: absolute;
+		top: 0px;
+		right: 50px;
+		width: 0; 
+		height: 0; 
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 10px solid #fff;
+		z-index: 9999;
+	}
+	.main-nav>li {
+		display: block;
+		text-align: right;
+		background: #fff;
+	}
+	.main-nav>li>a {
+		display: block;
+		text-align: right;
+		font-weight: normal;
+		border-bottom-width: 1px;
+		border-bottom-color: #BDBDBD;
+		margin: 0;
+		padding: 5px 10px;
+		color: #373737;
+	}
+	.main-nav>li:last-child>a {
+		border-bottom: none;
+	}
+	.main-nav>li.active>a,
+	.main-nav>li>a:hover{
+		color: #01C7CE;
+	}
+	.navbar-toggle{
+		border-color:  #BDBDBD;
+		border-radius: 0;
+		padding: 5px 10px;
+		margin-top: 22px;
+		margin-right: 0px;
+	}
+	.navbar-toggle span{
+		font-weight: bold;
+	}
+	.navbar-toggle span,
+	.navbar-toggle i{
+		color: #BDBDBD;
 	}
 	#filter{
 		display: block;
@@ -966,6 +1092,19 @@ ul.social li.rss:hover{
 	.navbar-custom .navbar-header .social-top ul.social{
 		display: inline-block;
 		margin-top: 0;
+	}
+	.navbar-toggle{
+		display: block;
+		width: 100%;
+		margin-top: 0;
+		margin-bottom: 25px;
+	}
+	.main-nav.in:before{
+		right: 50%;
+		margin-right: -5px;
+	}
+	.main-nav>li>a {
+		text-align: center;
 	}
 	.post-meta span {
 		line-height: 30px;

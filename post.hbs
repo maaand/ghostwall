@@ -19,7 +19,7 @@
 <main class="body-content" role="main">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                 <div class="post-wrap">
                     <article class="{{post_class}}">
                         <section class="post-content">
@@ -41,6 +41,32 @@
                                     <i class="fa fa-tags"></i> {{tags separator=" | "}}
                                 </span>
                                 {{/if}}
+                                <span class="share">
+                                    <span class="title">Share this post:</span>
+                                    <ul class="social">
+                                        <li class="twitter">
+                                            <a href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Twitter">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="facebook">
+                                            <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Facebook">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="google">
+                                            <a href="https://plus.google.com/share?url={{url absolute="true"}}"
+                                       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Google">
+                                                <i class="fa fa-google-plus"></i>
+                                            </a>
+                                        </li>
+                                        <li class="linkedin">
+                                            <a href="http://www.linkedin.com/shareArticle?mini=true&url={{url absolute="true"}}&title={{encode title}}&summary={{encode excerpt}}&source={{@blog.url}}" target="_blank" title="Linkedin">
+												<i class="fa fa-linkedin"></i>
+											</a>
+                                        </li>
+                                    </ul>
+                                </span>
                             </div>
                             {{#if author}}
                                 <div class="post-author">
@@ -61,7 +87,7 @@
                     {{> comment-form}}
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                 <div class="widget-wrap">
                     {{> sidebars}}
                 </div>

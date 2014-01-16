@@ -40,6 +40,9 @@ blockquote {
 #intro.covered:before{
 	background-color: #f3d42c;
 }
+#isotope-content .post.featured .wrap:after {
+  	border-color: transparent #f3d42c;
+}
 .post .wrap .post-title a:hover{
 	color: #f3d42c;
 }
@@ -55,9 +58,12 @@ blockquote {
 	color:#f3d42c;
 }
 .post-content a{
-	color:#01C7CE;
+	color:#f3d42c;
 }
 .feedList li:hover .itemTitle a, .feedList li:hover .itemContent{
+	color: #f3d42c;
+}
+.feedList li .itemContent .read-more {
 	color: #f3d42c;
 }
 .flickr-feed li a:hover img{
@@ -71,4 +77,8 @@ blockquote {
 }
 .totop:hover {
 	background:#f3d42c;
+}
+.main-nav.in>li.active>a,
+.main-nav.in>li>a:hover {
+	color: #f3d42c;
 }
