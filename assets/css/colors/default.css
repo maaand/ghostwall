@@ -1,17 +1,17 @@
 ::selection {
-	background: #5dcff3;
+	background: #31c6e5;
 	color: #fff;
 }
 a:hover, a:focus{
-	color: #01C7CE;
+	color: #31c6e5;
 }
 .btn-theme:hover,
 .btn-theme:focus,
 .btn-theme:active,
 .btn-theme.active,
 .open .dropdown-toggle.btn-theme {
-	background-color:#ffd97d;
-	border-color:#ffd97d;
+	background-color:#f28a8a;
+	border-color:#f28a8a;
 }
 textarea:focus,
 input[type="text"]:focus,
@@ -35,13 +35,16 @@ blockquote {
 	border-left-color:#01C7CE;
 }
 #intro {
-	background-color: #5dcff3;
+	background-color: #f28a8a;
 }
 #intro.covered:before{
-	background-color: #5dcff3;
+	background-color: #01C7CE;
+}
+#isotope-content .post.featured .wrap:after {
+  	border-color: transparent #01C7CE;
 }
 .post .wrap .post-title a:hover{
-	color: #01C7CE;
+	color: #f28a8a;
 }
 .post .wrap .post-photo .mask a.preview:hover,
 .post .wrap .post-photo .mask a.detail:hover {
@@ -52,13 +55,16 @@ blockquote {
 	color: #01C7CE;
 }
 .post .wrap .post-excerpt a.read-more{
-	color:#f0aa00;
+	color:#f28a8a;
 }
 .post-content a{
 	color:#01C7CE;
 }
 .feedList li:hover .itemTitle a, .feedList li:hover .itemContent{
-	color: #01C7CE;
+	color: #f28a8a;
+}
+.feedList li .itemContent .read-more {
+	color: #f28a8a;
 }
 .flickr-feed li a:hover img{
 	border-color:#01C7CE;
@@ -70,5 +76,9 @@ blockquote {
 	border-color:#01C7CE;
 }
 .totop:hover {
-	background:#01C7CE;
+	background:#31c6e5;
+}
+.main-nav.in>li.active>a,
+.main-nav.in>li>a:hover {
+	color: #01C7CE;
 }

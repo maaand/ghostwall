@@ -66,10 +66,10 @@ var ghostApp={
             $filterControl.append(filterItemStr);
         }
         if(lastActiveTag!=='*' && rememberLastActiveTag){
-            $("#filter ul li a[data-filter='"+lastActiveTag+"'").trigger('click');
+            $("#filter ul li a[data-filter='"+lastActiveTag+"']").trigger('click');
         }
         else{
-            $("#filter ul li a[data-filter='*'").trigger('click');
+            $("#filter ul li a[data-filter='*']").trigger('click');
         }
     },
     responsiveImages:function(){
@@ -203,10 +203,10 @@ var ghostApp={
                                         // trip html tag
                                         desc=$(desc).text();
                                         if (descCharacterLimit > 0 && desc.length > descCharacterLimit) {
-                                            htmlStr += '<div class="itemContent">' + desc.substr(0, descCharacterLimit) + " ...</div>";
+                                            htmlStr += '<div class="itemContent">' + desc.substr(0, descCharacterLimit) + ' ... <a class="read-more" href="' + $(this).find('link').eq(0).text() + '">Read more »</a></div>';
                                         }
                                         else{
-                                            htmlStr += '<div class="itemContent">' + desc + "</div>";
+                                            htmlStr += '<div class="itemContent">' + desc + '</div>';
                                         }
                                     }
                                     htmlStr += '</li>';
@@ -356,7 +356,7 @@ var ghostApp={
             },
             // call Isotope as a callback
             function( newElements ) {
-                $container.isotope('appended', $(newElements),function(){
+                $container.isotope('insert', $(newElements),function(){
                     ghostApp.responsiveImages();
                     ghostApp.reformatPost();
                     $(".post .wrap").fitVids();
@@ -378,17 +378,19 @@ var ghostApp={
             });
             $.ajax({
                 type: 'GET',
-                url: "https://disqus.com/api/3.0/threads/set.jsonp",
+                url: "http://disqus.com/api/3.0/threads/set.jsonp",
                 data: { api_key: disqusPublicKey, forum : disqusShortname, thread : urlArray },
                 cache: false,
                 dataType: 'jsonp',
                 success: function (result) {
                     for (var i in result.response) {
-                        var countText = " comments";
-                        var count = result.response[i].posts;
-                        if (count <= 1)
-                          countText = " comment";
-                        $('span[data-disqus-url="' + result.response[i].link + '"]').html(count + countText);
+                        if(result.response[i].forum==disqusShortname){
+                            var countText = " comments";
+                            var count = result.response[i].posts;
+                            if (count <= 1)
+                              countText = " comment";
+                            $('span[data-disqus-url="' + result.response[i].link + '"]').html(count + countText);
+                        }
                     }
                 }
             });
@@ -438,6 +440,16 @@ var ghostApp={
         ));
         SyntaxHighlighter.all();
     },
+    mainMenuEvents:function(){
+        if($('.main-nav').length){
+            var currentUrl=window.location.href;
+            var $currentMenu=$('.main-nav a[href="'+currentUrl+'"]');
+            if($currentMenu.length){
+                $('.main-nav li.active').removeClass('active');
+                $currentMenu.parent().addClass('active');
+            }
+        }
+    },
     misc:function(){
         $("a[rel^='prettyPhoto']").prettyPhoto({
             theme: 'light_square',
@@ -475,6 +487,7 @@ var ghostApp={
         ghostApp.getInstagram();
         ghostApp.getDribbble();
         ghostApp.syntaxHighlighter();
+        ghostApp.mainMenuEvents();
         ghostApp.misc();
     }
 };
