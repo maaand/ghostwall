@@ -163,9 +163,10 @@ pre{
 .navbar>.container .navbar-brand{
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 40px;
+	font-variant: small-caps;
+	font-size: 30px;
 	color: #FEFEFE;
-	line-height: 50px;
+	line-height: 40px;
 }
 .navbar>.container .navbar-brand img{
 	max-height: 50px;
